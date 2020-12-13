@@ -1,0 +1,247 @@
+<html>
+
+<head>
+  <style>
+    html {
+      width: 630px;
+      height: 420px;
+    }
+
+    body {
+      overflow: hidden;
+      margin: 10px 15px 0px;
+      padding: 0px;
+      background: linear-gradient(296.91deg, #3f3547 3.73%, #7d81a4 97.68%);
+      ;
+      font-family: sans-serif;
+      font-size: 0.8em;
+      height: 400px;
+
+    }
+
+    input {
+      margin: 5px;
+    }
+
+    #content {
+      width: 600px;
+      height: 350px;
+      margin-top: 5px;
+
+      background: linear-gradient(296.91deg, #3f3547 3.73%, #7d81a4 97.68%);
+      ;
+    }
+
+    #spans {
+      color: white;
+    }
+
+    * {
+      --primary-1: 230, 15%, 22%;
+      /* Neutral */
+      --primary-2: 230, 15%, 20%;
+      /* Dark */
+      --primary-3: 230, 15%, 18%;
+      /* Darker */
+      --primary-4: 230, 15%, 45%;
+      /* Lightest */
+      --secondary: 166, 69%, 81%;
+      /* Splash of Color */
+      --transition: cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    .multi-button {
+      --shadow: 286, 24%, 14%;
+      position: relative;
+      padding: 0.2rem;
+      background: hsl(var(--primary-1));
+      border: 1px solid hsl(var(--primary-2));
+      box-shadow: 1px 1px 1px hsla(var(--shadow), 0.12),
+        3px 3px 3px hsla(var(--shadow), 0.11), 5px 5px 5px hsla(var(--shadow), 0.1),
+        7px 7px 7px hsla(var(--shadow), 0.09),
+        11px 11px 11px hsla(var(--shadow), 0.08),
+        13px 13px 13px hsla(var(--shadow), 0.07),
+        17px 17px 17px hsla(var(--shadow), 0.06),
+        19px 19px 19px hsla(var(--shadow), 0.05),
+        23px 23px 23px hsla(var(--shadow), 0.04),
+        29px 29px 29px hsla(var(--shadow), 0.03);
+      border-radius: 4px;
+      user-select: none;
+    }
+
+    label {
+      display: inline-block;
+      position: relative;
+      padding: 0.3rem 0.4rem;
+      color: #5c617b;
+      font-size: 13px;
+      font-weight: 200;
+      font-family: "Poppins", "Helvetica", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      border: none;
+      border-radius: 11px;
+      background: none;
+      transition: all 0.4s var(--transition);
+      cursor: pointer;
+    }
+
+    span {
+      margin-right: 0.1rem;
+    }
+
+    span svg {
+      height: 16px;
+      width: 16px;
+    }
+
+    label:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 0;
+      top: 20%;
+      left: 50%;
+      background: hsla(var(--secondary), 0.35);
+      border-radius: 2px;
+      transition: all 0.25s var(--transition);
+    }
+
+    label:hover:before {
+      width: 90%;
+      left: 6%;
+      border-top: 1px solid hsl(var(--secondary));
+    }
+
+    input:checked+label:before {
+      height: 60%;
+      bottom: 20%;
+    }
+
+    input:checked+label {
+      color: hsl(var(--secondary));
+      transition-delay: 0.1s;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    span:first-child {
+      font-size: 13px;
+    }
+
+    .box {
+      display: block;
+      width: 80%;
+      max-width: 900px;
+      margin: 20vh auto;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 100;
+    }
+
+    textarea {
+      -webkit-tap-highlight-color: transparent;
+      width: 100%;
+      min-height: 8rem;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      line-height: 2rem;
+      font-weight: 300;
+      border-radius: 1rem;
+      outline: none;
+      resize: vertical;
+      transition: ease .2s;
+      cursor: pointer;
+    }
+
+
+    textarea:focus {
+      min-height: 12rem;
+      box-shadow:
+        inset 18px 18px 30px #D1D9E9,
+        inset -18px -18px 30px #FFFFFF;
+    }
+  </style>
+  <script type="text/javascript" src="PanaorTabs.js"></script>
+  <!-- <script type="text/javascript" src="async.js"></script> -->
+ 
+
+  <!-- <script type="text/javascript" src="oauth.js"></script> -->
+</head>
+
+<body>
+  <form>
+    <span id="spans"> Include:</span>
+    <input id="inclTitle" name="buttons" type="checkbox" value="1" checked="checked" />
+    <label for="inclTitle">
+      <span id="spans">Title</span>
+    </label>
+    <input id="inclAll" type="checkbox" value="1" />
+    <label for="inclAll">
+      <span id="spans"> AllWindows</span>
+    </label>
+    <br />
+    <!-- <textarea id="content"></textarea> -->
+    <textarea name="content" id="content"></textarea>
+  </form>
+  <div class="multi-button">
+    <input name="buttons" type="checkbox" id="cut" checked="checked">
+    <label for="cut">
+      <span>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="3" />
+          <circle cx="6" cy="18" r="3" />
+          <line x1="20" x2="8.12" y1="4" y2="15.88" />
+          <line x1="14.47" x2="20" y1="14.48" y2="20" />
+          <line x1="8.12" x2="12" y1="8.12" y2="12" />
+        </svg>
+      </span>SendToGmail</label>
+    <input name="buttons" type="checkbox" id="copy">
+
+    <input name="buttons" type="checkbox" id="download">
+    <label for="download">
+      <span>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+        </svg>
+      </span>download</label>
+    <input name="buttons" type="checkbox" id="sendMail0">
+    <label for="sendMail0">
+      <span>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+        </svg>
+      </span>sendMailTo</label>
+    <input name="buttons" type="checkbox" id="btOpenTabs">
+    <label for="btOpenTabs">
+      <span>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+        </svg>
+      </span>OpenAllLinks</label>
+     
+  </div>
+</body>
+
+</html>

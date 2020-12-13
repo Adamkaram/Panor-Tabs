@@ -1,0 +1,20 @@
+{
+    "name": "Panaor Tabs",
+    "version": "1.0",
+    "description": "Export the URL of all opened tabs to text",
+    "icons": {
+      
+        "128": "tabs_io.png"
+    },
+    "browser_action": {
+        "default_icon": "tabs_io.png",
+        "default_title": "PTanda Tabs",
+        "default_popup": "popup.html"
+    },
+  
+    "permissions": ["tabs"],
+    "manifest_version": 2
+   
+    
+
+}
